@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>
+            Advanced Calculator
+        </title>
+        <style>
+            .Calculator
+            {
+                width:30%;
+                height:700px;
+                border:3px solid rgb(177, 68, 68);
+                margin-left:450px;
+                text-align:center;
+                font-size: 20px;
+                background-color: rgb(112, 112, 177);
+            }
+            .display
+            {
+                width:350px;
+                height:50px;
+                font-size: 32px;
+                text-align: center;
+                margin-bottom: 10px;
+                color:rgb(12, 1, 1);
+            }
+            .button
+            {
+                width: 20%;
+                height:100px;
+                background-color: rgb(113, 207, 187);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Calculator" <h1> <b><big>Calculator</big></b></h1>
+            <input class="display" id="display">
+            <div calss="button"></div>
+            <button class="button" onclick="appedValue(7)">7</button>
+            <button class="button" onclick="appedValue(8)">8</button>
+            <button class="button" onclick="appedValue(9)">9</button>
+            <button class="button" onclick="appedValue('/')">➗</button>
+
+            <button class="button" onclick="appedValue(4)">4</button>
+            <button class="button" onclick="appedValue(5)">5</button>
+            <button class="button" onclick="appedValue(6)">6</button>
+            <button class="button" onclick="appedValue('*')">✖️</button>
+
+            <button class="button" onclick="appedValue(1)">1</button>
+            <button class="button" onclick="appedValue(2)">2</button>
+            <button class="button" onclick="appedValue(3)">3</button>
+            <button class="button" onclick="appedValue('-')">➖</button>
+
+            <button class="button" onclick="appedValue(0)">00</button>
+            <button class="button" onclick="appedValue('.')">.</button>
+            <button class="button" onclick="clearValue()">AC</button>
+            <button class="button" onclick="appedValue('+')">➕</button>
+
+            <button class="button" onclick="appedValue('%')">%</button>
+            <button class="button" onclick="appedValue('^')">^</button>
+            <button class="button" onclick="appedValue()">Backspace</button>
+
+            <button class="button" style="grid-column:span 4"; onclick="Calculate()">🟰</button>
+        </div>
+    </div>
+    <script>
+        let display=document.getElementById("display");
+
+        function appedValue(value)
+        {
+            display.value+=value;
+        }
+
+        function clearValue()
+        {
+            display.value='';
+        }
+        function Calculate()
+        {
+            display.value=eval(display.value);
+        }
+    </script>
+    </body>
+</html>
